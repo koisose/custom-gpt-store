@@ -7,7 +7,7 @@ from langchain.memory import ConversationBufferMemory, ChatMessageHistory
 from langchain.schema import HumanMessage, AIMessage
 import streamlit.components.v1 as components
 import os
-st.set_page_config(layout="wide")
+st.set_page_config(page_title="Clarifai Bot",layout="wide")
 ClarifaiStreamlitCSS.insert_default_css(st)
 
 with open('./styles.css') as f:

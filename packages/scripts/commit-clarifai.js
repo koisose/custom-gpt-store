@@ -1,4 +1,5 @@
 
+require('dotenv').config()
 const PAT = process.env.CLARIFAI_API_KEY;
 const { execSync, spawn } = require("child_process");
 const USER_ID = 'openai';
