@@ -1,11 +1,9 @@
 # What's This?
-
 Using this module, you can ask GPT-4 Turbo.
 
 # Develop
 
 ## Auto Commit
-
 When you want to commit changes, you can also use GPT-4 Turbo through Clarifai. You need to set the environment variable `CLARIFAI_API_KEY`. Go to [https://clarifai.com/settings/security](https://clarifai.com/settings/security), and copy and paste your personal access token there. Then run:
 
 ```
@@ -19,8 +17,7 @@ pnpm run commit
 ```
 
 ### Some Notes
-
-- You may have seen a command like this in packages/scripts/package.json: `export GITHUB_TOKEN=$SUPER_TOKEN`. You can delete that as it is used for `gh cli` in Codespaces purposes.
+- You may have seen a command like this in packages/scripts/package.json: export GITHUB_TOKEN=$SUPER_TOKEN. You can delete that as it is used for `gh cli` in Codespaces purposes.
 - If any commit message is in Indonesian languages, you can change the prompt in `packages/scripts/commit-clarifai.js`, especially the one saying:
 
 ```
