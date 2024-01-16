@@ -74,7 +74,7 @@ conversation = ConversationChain(
 )
 
 if "chat_history" not in st.session_state.keys():
-  st.session_state['chat_history'] = [{"role": "assistant", "content": "How may I help you?"}]
+  st.session_state['chat_history'] = [{"role": "system", "content": """you can answer anything"""}]
 
 
 # After every input from user, the streamlit page refreshes by default which is unavoidable.

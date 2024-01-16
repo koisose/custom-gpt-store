@@ -1,0 +1,2 @@
+cd packages/module-chatbot
+streamlit run app.py --server.runOnSave=true
