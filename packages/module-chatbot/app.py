@@ -6,7 +6,7 @@ from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory, ChatMessageHistory
 from langchain.schema import HumanMessage, AIMessage
 import streamlit.components.v1 as components
-
+import os
 st.set_page_config(layout="wide")
 ClarifaiStreamlitCSS.insert_default_css(st)
 
@@ -39,7 +39,7 @@ def get_default_models():
     select_map[id+' : '+author] = id
   return models_map, select_map
 
-pat = load_pat()
+pat = os.environ.get('CLARIFAI_API_KEY')
 models_map, select_map = get_default_models()
 default_llm = "GPT-4"
 llms_map = {'Select an LLM':None}
