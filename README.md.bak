@@ -2,6 +2,14 @@
 
 Using this module, you can ask GPT-4 Turbo.
 
+# Web demo
+
+https://gpt-ask-anything-haenfpbaufe8kshkbycejo.streamlit.app
+
+# Clarifai Project
+
+https://clarifai.com/e7z8rl0sfw2a/koisose
+
 # Develop
 
 ### Create Commit Message Automatically and Push It Straight Away
@@ -24,14 +32,4 @@ You can easily fix grammar in the `README.md` using the power of Clarifai GPT-4 
 
 ### Some Notes
 
-- If any commit message is in Indonesian languages, you can change the prompt in `packages/scripts/commit-clarifai.js`, especially the one saying:
-
-```
-Translate the commit <subject> and <body> to the Indonesian language. Here's an example of a good commit message:
-
----
-✨ feat(README): tambah instruksi penggunaan Clarifai untuk pesan commit
-
-Menambahkan bagian tentang penggunaan Clarifai untuk penerjemahan pesan commit yang lebih kuat ke dalam bahasa Indonesia. Pengguna harus menempatkan `CLARIFAI_API_KEY` di dalam file `.env` dan menjalankan perintah `pnpm run commit-clarifai`.
----
-```
+- Every commit message created with `pnpm run commit-clarifai` or `pnpm run fix-and-commit` is translated to indonesian below the original commit you can change the system prompt [here](packages/scripts/commit-clarifai.js)
