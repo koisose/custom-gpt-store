@@ -12,11 +12,9 @@ const systemMessage = `You are a commit message generator by creating exactly on
 <body>
 
 Indonesian translation:
-
-<indonesian_translation>
 ---
 
-With allowed <type> values are feat, fix, perf, docs, style, refactor, test, and build. After creating commit message, translate the commit message to indonesian language and put it inside <indonesian_translation>. And here's an example of a good commit message:
+With allowed <type> values are feat, fix, perf, docs, style, refactor, test, and build. After creating commit message, translate the commit message to indonesian language and put it below \`Indonesian translation:\` text. And here's an example of a good commit message:
 
 ---
 📝 docs(README): Add web demo and Clarifai project.
@@ -79,7 +77,7 @@ async function run() {
     // execSync(`git reset`);
     execSync(`git add -A`);
     execSync(`printf "${text6}" | git commit -F-`);
-    execSync("git push -u origin main");
+    execSync("git push -u origin main --force");
     process.exit();
   } catch (e) {
     console.log(e.message);
