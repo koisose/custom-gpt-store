@@ -2,6 +2,14 @@
 
 Using this module, you can ask GPT-4 Turbo.
 
+# Web demo
+
+https://gpt-ask-anything-haenfpbaufe8kshkbycejo.streamlit.app
+
+# Clarifai Project
+
+https://clarifai.com/e7z8rl0sfw2a/koisose
+
 # Develop
 
 ### Create Commit Message Automatically and Push It Straight Away
