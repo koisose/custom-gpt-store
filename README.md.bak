@@ -6,7 +6,7 @@ Using this module, you can ask GPT-4 Turbo.
 
 ### Create Commit Message Automatically and Push It Straight Away
 
-When you want to commit changes, you can also use GPT-4 Turbo through Clarifai. You need to set the environment variable `CLARIFAI_API_KEY`. Go to [https://clarifai.com/settings/security](https://clarifai.com/settings/security), and copy and paste your personal access token there. Then run:
+When you want to commit changes, you can use GPT-4 Turbo through Clarifai. You need to set the environment variable `CLARIFAI_API_KEY`. Go to [https://clarifai.com/settings/security](https://clarifai.com/settings/security), and copy and paste your personal access token there. Then run:
 
 ```
 pnpm run commit-clarifai
@@ -20,7 +20,7 @@ pnpm run commit
 
 ### Auto Fix `README.md` Grammar
 
-You can easily fix grammar in this `README.md` using the power of Clarifai GPT-4 Turbo by running `pnpm run fix-grammar`. And if you want to fix grammar and create a commit message automatically and push it straight away, use the command `pnpm run fix-and-commit`.
+You can easily fix grammar in the `README.md` using the power of Clarifai GPT-4 Turbo by running `pnpm run fix-grammar`. And if you want to fix grammar and create a commit message automatically and push it straight away, use the command `pnpm run fix-and-commit`.
 
 ### Some Notes
 
