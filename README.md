@@ -32,4 +32,4 @@ You can easily fix grammar in the `README.md` using the power of Clarifai GPT-4 
 
 ### Some Notes
 
-- Every commit message created with `pnpm run commit-clarifai` or `pnpm run fix-and-commit` is translated to Indonesian below the original commit you can change the system prompt [here](packages/scripts/commit-clarifai.js)
+- Every commit message created with `pnpm run commit-clarifai` or `pnpm run fix-and-commit` is translated to Indonesian below the original commit. You can change the system prompt [here](packages/scripts/commit-clarifai.js).
