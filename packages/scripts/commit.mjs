@@ -77,7 +77,7 @@ async function run() {
     // execSync(`git reset`);
     execSync(`git add -A`);
     execSync(`printf "${text6}" | git commit -F-`);
-    execSync("git push -u origin main --force");
+    execSync("git push -u origin main");
     process.exit();
   } catch (e) {
     console.log(e.message);

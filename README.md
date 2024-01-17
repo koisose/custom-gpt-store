@@ -4,7 +4,7 @@ This is a custom GPT store. It's basically inspired by [GPT store](https://opena
 
 # Web demo
 
-[https://gpt-ask-anything-haenfpbaufe8kshkbycejo.streamlit.app](https://gpt-ask-anything-haenfpbaufe8kshkbycejo.streamlit.app)
+[https://koisose.streamlit.app](https://koisose.streamlit.app)
 
 # Clarifai Project
 

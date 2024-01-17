@@ -10,51 +10,11 @@ import os
 st.set_page_config(page_title="Clarifai Bot",layout="wide")
 ClarifaiStreamlitCSS.insert_default_css(st)
 
-
-
-def load_pat():
-  if 'CLARIFAI_PAT' not in st.secrets:
-    st.error("You need to set the CLARIFAI_PAT in the secrets.")
-    st.stop()
-  return st.secrets.CLARIFAI_PAT
-
-
-def get_default_models():
-  if 'DEFAULT_MODELS' not in st.secrets:
-    st.error("You need to set the default models in the secrets.")
-    st.stop()
-
-  models_list = [x.strip() for x in st.secrets.DEFAULT_MODELS.split(",")]
-  models_map = {}
-  select_map = {}
-  for i in range(len(models_list)):
-    m = models_list[i]
-    id, rem = m.split(':')
-    author, app = rem.split(';')
-    models_map[id] = {}
-    models_map[id]['author'] = author
-    models_map[id]['app'] = app
-    select_map[id+' : '+author] = id
-  return models_map, select_map
-
 pat = os.environ.get('CLARIFAI_API_KEY')
-models_map, select_map = get_default_models()
+
 default_llm = "GPT-4"
-llms_map = {'Select an LLM':None}
-llms_map.update(select_map)
-
-if 'chosen_llm' not in st.session_state.keys():
-  chosen_llm = st.selectbox(label="Select an LLM for chatting", options=llms_map.keys())
-  if chosen_llm and llms_map[chosen_llm] is not None:
-    st.session_state.clear()
-    st.session_state['chosen_llm'] = llms_map[chosen_llm]
-
-if "chosen_llm" in st.session_state.keys():
-  cur_llm = st.session_state['chosen_llm']
-  st.title(f"Chatting with {cur_llm}")
-  llm = Clarifai(pat=pat, user_id=models_map[cur_llm]['author'], app_id=models_map[cur_llm]['app'], model_id=cur_llm)
-else:
-  llm = Clarifai(pat=pat, user_id="openai", app_id="chat-completion", model_id=default_llm)
+st.title(f"Chatting with GPT-4")
+llm = Clarifai(pat=pat, user_id="openai", app_id="chat-completion", model_id=default_llm)
 
 template = """
 Current conversation:
@@ -70,7 +30,7 @@ conversation = ConversationChain(
   verbose=True,
   memory=ConversationBufferMemory(ai_prefix="AI Assistant", memory_key="chat_history"),
 )
-
+st.session_state.clear()
 if "chat_history" not in st.session_state.keys():
   st.session_state['chat_history'] = [{"role": "system", "content": """you can answer anything"""}]
 
