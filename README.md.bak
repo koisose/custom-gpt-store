@@ -1,14 +1,14 @@
 # What's This?
 
-Using this module, you can ask GPT-4 Turbo.
+This is a custom GPT store. Its basically inspired by [GPT store](https://openai.com/blog/introducing-the-gpt-store) itself.
 
 # Web demo
 
-https://gpt-ask-anything-haenfpbaufe8kshkbycejo.streamlit.app
+[https://gpt-ask-anything-haenfpbaufe8kshkbycejo.streamlit.app](https://gpt-ask-anything-haenfpbaufe8kshkbycejo.streamlit.app)
 
 # Clarifai Project
 
-https://clarifai.com/e7z8rl0sfw2a/koisose
+[https://clarifai.com/e7z8rl0sfw2a/koisose](https://clarifai.com/e7z8rl0sfw2a/koisose)
 
 # Develop
 
@@ -32,4 +32,4 @@ You can easily fix grammar in the `README.md` using the power of Clarifai GPT-4 
 
 ### Some Notes
 
-- Every commit message created with `pnpm run commit-clarifai` or `pnpm run fix-and-commit` is translated to indonesian below the original commit you can change the system prompt [here](packages/scripts/commit-clarifai.js)
+- Every commit message created with `pnpm run commit-clarifai` or `pnpm run fix-and-commit` is translated to Indonesian below the original commit you can change the system prompt [here](packages/scripts/commit-clarifai.js)

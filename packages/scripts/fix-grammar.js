@@ -96,7 +96,7 @@ const html = converter.makeHtml(source);
 
 const markdown = fixedGrammar.replace(/^\`\`\`markdown\n/, '').replace(/\n\`\`\`$/, '');
       
-        console.log(markdown)
+        // console.log(markdown)
       await writeFile(markdown, sourceFile);
       process.exit();
     } catch (e) {

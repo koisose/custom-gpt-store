@@ -1,6 +1,6 @@
 # What's This?
 
-Using this module, you can ask GPT-4 Turbo.
+This is a custom GPT store. It's basically inspired by [GPT store](https://openai.com/blog/introducing-the-gpt-store) itself.
 
 # Web demo
 

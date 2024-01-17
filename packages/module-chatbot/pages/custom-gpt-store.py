@@ -1,8 +1,8 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Clarifai",
-    page_icon="👋",
+    page_title="Clarifai Custom GPT Store",
+    page_icon="🛍️",
 )
 
 st.markdown(
