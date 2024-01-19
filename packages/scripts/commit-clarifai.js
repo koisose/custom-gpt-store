@@ -131,7 +131,7 @@ async function gitDiffStaged() {
         message: 'Do you want to push?',
       });
       if(shouldContinue){
-        execSync(`git add -A`);
+        execSync(`cd ../../ && git add -A`);
         execSync(`printf "${text5}" | git commit -F-`);
         execSync("git push -u origin main");
       }else{
