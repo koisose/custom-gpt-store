@@ -1,2 +1,0 @@
-cd packages/module-chatbot
-streamlit run explore.py --server.runOnSave=true
