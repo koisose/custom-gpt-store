@@ -30,7 +30,6 @@ conversation = ConversationChain(
   verbose=True,
   memory=ConversationBufferMemory(ai_prefix="AI Assistant", memory_key="chat_history"),
 )
-st.session_state.clear()
 if "chat_history" not in st.session_state.keys():
   st.session_state['chat_history'] = [{"role": "system", "content": """you can answer anything"""}]
 
@@ -60,15 +59,13 @@ def chatbot():
       with st.spinner("Thinking..."):
         response = conversation.predict(input=message, chat_history=st.session_state["chat_history"])
         # llama response format if different. It seems like human-ai chat examples are appended after the actual response.
-        if st.session_state['chosen_llm'].find('lama') > -1:
-          response = response.split('Human:',1)[0]
+        
         st.write(response)
         message = {"role": "assistant", "content": response}
         st.session_state['chat_history'].append(message)
     st.write("\n***\n")
 
-if "chosen_llm" in st.session_state.keys():
-  show_previous_chats()
-  chatbot()
+show_previous_chats()
+chatbot()
 
 
