@@ -24,8 +24,7 @@ with col1:
 # else:
 
 parent_dir = os.path.dirname(os.path.abspath(__file__))
-build_dir = os.path.join(parent_dir, "frontend/build")
-st.write(build_dir)
+build_dir = os.path.join(parent_dir, "frontend/dimbo")
 _component_func = components.declare_component("my_component", path=build_dir)
 _component_func()
     # parent_dir = os.path.dirname(os.path.abspath(__file__))

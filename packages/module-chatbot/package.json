@@ -11,7 +11,7 @@
     "streamlit": "streamlit run explore.py --server.runOnSave=true",
     "streamlit-frontend": "cd frontend && pnpm run start",
     "start": "cd frontend && react-scripts start",
-    "build": "cd frontend && react-scripts build"
+    "build": "cd frontend && BUILD_PATH='./dimbo' react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
