@@ -13,7 +13,7 @@
     "fix-grammar": "pnpm --filter scripts fix-grammar",
     "fix-and-commit": "pnpm --filter scripts fix-grammar && pnpm --filter scripts commit-clarifai", 
     "streamlit": "pnpm --filter module-chatbot streamlit",
-    "build": "pnpm --filter module-chatbot build"},
+    "frontend-build": "pnpm --filter module-chatbot build"},
   "keywords": [],
   "author": "",
   "license": "ISC",
