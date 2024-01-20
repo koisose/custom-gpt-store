@@ -3,4 +3,5 @@
 
 pnpm run scripts-prettier
 pnpm run frontend-prettier
+pnpm run frontend-build
 
