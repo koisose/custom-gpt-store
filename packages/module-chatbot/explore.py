@@ -13,22 +13,20 @@ with col1:
     st.button('Say hello')
     st.button('Say helddlo',key="haha")
 
-# if not _RELEASE:
-#     _component_func = components.declare_component(
-#
-#         "my_component",
-#
-#         url="http://localhost:3001",
-#     )
-#     _component_func()
-# else:
+if not _RELEASE:
+    _component_func = components.declare_component(
 
-parent_dir = os.path.dirname(os.path.abspath(__file__))
-build_dir = os.path.join(parent_dir, "frontend/dimbo")
-_component_func = components.declare_component("my_component", path=build_dir)
-_component_func()
-    # parent_dir = os.path.dirname(os.path.abspath(__file__))
-    # build_dir = os.path.join(parent_dir, "frontend/build")
+        "my_component",
+
+        url="http://localhost:3001",
+    )
+    _component_func()
+else:
+    parent_dir = os.path.dirname(os.path.abspath(__file__))
+    build_dir = os.path.join(parent_dir, "frontend/dimbo")
+    _component_func = components.declare_component("my_component", path=build_dir)
+    _component_func()
+    
 
 
 
