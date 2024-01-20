@@ -16,11 +16,11 @@ default_llm = "GPT-4"
 st.title(f"Chatting with GPT-4")
 llm = Clarifai(pat=pat, user_id="openai", app_id="chat-completion", model_id=default_llm)
 
-template = """
-Current conversation:
-{chat_history}
-Human: {input}
-AI Assistant:"""
+template = ("\n"
+            "Current conversation:\n"
+            "{chat_history}\n"
+            "Human: {input}\n"
+            "AI Assistant:")
 
 prompt = PromptTemplate(template=template, input_variables=["chat_history", "input"])
 

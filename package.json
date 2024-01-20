@@ -8,7 +8,7 @@
        "commit-clarifai": "pnpm --filter scripts commit-clarifai",
     "scripts-prettier": "pnpm --filter scripts fmt",
     "frontend-prettier": "pnpm --filter frontend fmt",
-    "frontend-dev": "pnpm --filter frontend dev",
+    "frontend-start": "pnpm --filter module-chatbot start",
     "frontend-deploy": "pnpm --filter frontend deploy",
     "fix-grammar": "pnpm --filter scripts fix-grammar",
     "fix-and-commit": "pnpm --filter scripts fix-grammar && pnpm --filter scripts commit-clarifai", 

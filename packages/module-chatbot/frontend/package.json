@@ -1,5 +1,5 @@
 {
-  "name": "module-chatbot",
+  "name": "my_component",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,10 +8,10 @@
     "streamlit-component-lib": "^2.0.0"
   },
   "scripts": {
-    "streamlit": "streamlit run explore.py --server.runOnSave=true",
-    "streamlit-frontend": "cd frontend && pnpm run start",
-    "start": "cd frontend && react-scripts start",
-    "build": "cd frontend && react-scripts build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

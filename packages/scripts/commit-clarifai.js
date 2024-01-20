@@ -1,7 +1,10 @@
 
-const PAT = process.env.CLARIFAI_API_KEY;
+const dotenv = require("dotenv");
+dotenv.config();
+
 const { confirm } = require('@clack/prompts');
 const { execSync, spawn } = require("child_process");
+const PAT = process.env.CLARIFAI_API_KEY;
 const USER_ID = 'openai';
 const APP_ID = 'chat-completion';
 // Change these to whatever model and text URL you want to use
